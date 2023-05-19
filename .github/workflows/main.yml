@@ -24,8 +24,7 @@ jobs:
       - name: Publish .NET Core Project
         run: dotnet publish BlazorTesting.csproj -c Release -o release --nologo
       - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: release/wwwroot
+          target_branch: gh-pages
+          build_dir: release/wwwroot
