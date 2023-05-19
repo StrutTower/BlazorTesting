@@ -1,7 +1,11 @@
+#Source: https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages
+Name: Deploy to GitHub Pages
+
 # Run workflow on every push to the master branch
 on:
   push:
     branches: [ master ]
+    
 jobs:
   deploy-to-github-pages:
     # use ubuntu-latest image to run steps on
